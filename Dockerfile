@@ -38,8 +38,8 @@
     COPY --from=builder /app/dist ./dist
     
     # Expose the port the server will run on
-    EXPOSE 3000
+    EXPOSE 80
     
     # *** FIX APPLIED HERE: Changed 'build' to 'dist' ***
     # Run the 'serve' command to host the built application from the 'dist' folder.
-    CMD ["serve", "-s", "dist", "-l", "3000"]
+    CMD ["serve", "-s", "dist", "-l", "80"]
